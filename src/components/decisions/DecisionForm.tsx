@@ -126,7 +126,7 @@ export function DecisionForm() {
         <label className="label-caps text-xs text-white/50">Opción más cara</label>
         <input
           className="w-full bg-transparent border-b border-white/20 py-2 mb-4 outline-none focus:border-brand-gold"
-          placeholder="ej. Starbucks"
+          placeholder={expensiveLabel ? undefined : "Nombre del comercio o servicio"}
           value={expensiveLabel}
           onChange={(e) => setExpensiveLabel(e.target.value)}
           required
@@ -146,7 +146,7 @@ export function DecisionForm() {
         <label className="label-caps text-xs text-white/50">Opción que elegiste</label>
         <input
           className="w-full bg-transparent border-b border-white/20 py-2 mb-4 outline-none focus:border-brand-gold"
-          placeholder="ej. Café OXXO"
+          placeholder={cheapLabel ? undefined : "Nombre del comercio o servicio"}
           value={cheapLabel}
           onChange={(e) => setCheapLabel(e.target.value)}
           required
